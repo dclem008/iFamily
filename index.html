@@ -31,7 +31,7 @@
                 </ul>
             </div>
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal">
+                <a id="loginLink">
                     <span class="fa fa-sign-in"></span> Login
                 </a>
             </span>
@@ -76,27 +76,6 @@
             </div>
         </div>
     </div>
-
-    <header class="jumbotron">
-        <div class="container">
-            <div class="row row-header">
-                <div class="col-12 col-sm-6">
-                    <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
-                </div>
-                <div class="col-12 col-sm-3 align-self-center"> <!--col-3 align self-center-->
-                    <img src="img/logo.png" class="img-fluid"> <!--height="100" width="100"-->
-                </div>
-                <div class="col-12 col-sm-3 align-self-center">
-                    <a class="btn btn-lg btn-block btn-warning text-red"
-                        data-toggle="modal" data-target="#reserveModal">
-                        Reserve Table
-                    </a> 
-                </div> 
-                </div>
-            </div>
-        </div>
-    </header>
 
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
@@ -190,6 +169,27 @@
             </div>
         </div>
     </div>
+
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-6">
+                    <h1>Ristorante con Fusion</h1>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>
+                <div class="col-12 col-sm-3 align-self-center"> 
+                    <img src="img/logo.png" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                    <a id="reserveButton" class="btn btn-lg btn-block btn-warning text-red"
+                        > 
+                        Reserve Table
+                    </a> 
+                </div> 
+                </div>
+            </div>
+        </div>
+    </header>
 
     <div class="container">
         <div class="row row-content">
@@ -346,6 +346,16 @@
                     $("#carouselButton").children('span').addClass('fa-pause');
                 }
                 
+            });
+
+            $("#loginLink").click(function() {
+                $("#loginModal").modal('toggle');
+                $("#loginModal").modal('show');
+            });
+            
+            $("#reserveButton").click(function() {
+                $("#reserveModal").modal('toggle');
+                $("#reserveModal").modal('show');
             });
         });
     </script>
