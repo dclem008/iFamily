@@ -2,7 +2,8 @@ $lt-gray: #ddd;
 $background-dark: #E75480;
 $background-light: #FFB6C1;
 $modal-background-light: #ffe1e6;
-$background-pale: #D1C4E9;
+$navbar-menu-background: #ffc4cd;
+$background-pale: #fff0f2;
 
 //Height variables
 $carousel-item-height: 300px;
@@ -26,6 +27,10 @@ $carousel-item-height: 300px;
 .footer {
     background-color: $background-pale;
     @include zero-margin(20px, 0px);
+
+    .row {
+        top: 0;
+    }
 }
 
 .jumbotron {
@@ -78,6 +83,13 @@ body {
     z-index: 1;
 }
 
+#addPhotoButton {
+    left: 0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
+
 .modal {
     .modal-header {
         background-color: $background-dark;
@@ -93,3 +105,142 @@ body {
     }
 }
 
+#navBarDiv {
+    min-height: 100%;
+    background-color: $navbar-menu-background;
+    width: 35%;
+    float: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .container {
+        padding-left: 0;
+        #navBarMenu {
+            width: 100%;
+            min-height: 100%;
+            z-index: 2;
+            top: 0;
+            position: absolute;
+            .chat_list {
+                width:100%;
+                min-height: 100%;
+                position: absolute;
+                top:0;
+                .navbar-header {
+                    border-bottom: 2px solid #05728f;
+                    padding: 5px 10px 10px 10px;
+                }
+                .chat_nav {
+                    .chat_family {
+                        border-bottom: 2px solid #1339b6;
+                        margin: 0;
+                        padding: 18px 3px 5px;
+                        width:100%;
+                        .chat_img {
+                            float: left;
+                            width: 15%;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        .chat_ib {
+                            width:85%;
+                            h5 {
+                                font-size:15px; 
+                                color:#464646; 
+                                margin:0 0 8px 0;
+                                span {
+                                    font-size:13px; 
+                                    float:right; 
+                                }
+                                p {
+                                    font-size:14px; 
+                                    color:#989898; 
+                                    margin:auto;
+                                }
+                            } 
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+#input_msg {
+    bottom: 17%;
+    position: sticky;
+    .col {
+        width: 100%;
+        top: 0;
+        .input_msg_write input {
+            background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+            border: medium none;
+            color: #4c4c4c;
+            font-size: 15px;
+            min-height: 48px;
+            width: 100%;
+        }
+    }
+}
+
+.type_msg {border-top: 1px solid #E75480;position: relative;}
+.msg_send_btn {
+  background: #05728f none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+  height: 33px;
+  position: absolute;
+  right: 25px;
+  top: 8px;
+  width: 33px;
+}
+
+.received_msg {
+    display: inline-block;
+    padding: 0 0 0 10px;
+    vertical-align: top;
+    width: 92%;
+   }
+   .received_withd_msg p {
+    background: #ebebeb none repeat scroll 0 0;
+    border-radius: 3px;
+    color: #646464;
+    font-size: 14px;
+    margin: 0;
+    padding: 5px 10px 5px 12px;
+    width: 100%;
+  }
+  .time_date {
+    color: #747474;
+    display: block;
+    font-size: 12px;
+    margin: 8px 0 0;
+  }
+  .received_withd_msg { width: 57%;}
+  
+   .sent_msg p {
+    background: #05728f none repeat scroll 0 0;
+    border-radius: 3px;
+    font-size: 14px;
+    margin: 0; color:#fff;
+    padding: 5px 10px 5px 12px;
+    width:100%;
+  }
+  .outgoing_msg{ overflow:hidden; margin:26px 0 26px;}
+  .sent_msg {
+    float: right;
+    width: 46%;
+  }
+
+  .tab-pane {
+    float: right;
+    padding: 30px 15px 120px 25px;
+    width: 65%;
+  }
+  
