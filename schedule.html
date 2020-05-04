@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
         <link rel="stylesheet" href="css/styles.css">
         <!-- endbuild -->
-    <title>Ristorante Con Fusion: About Us</title>
+    <title>Schedule</title>
 
 </head>
 
@@ -29,12 +29,16 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
                     <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-calendar" aria-hidden="true"></i> Schedule</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><i class="fa fa-book" aria-hidden="true"></i> Memories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Tasks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./memoryBook.html"><i class="fa fa-book" aria-hidden="true"></i> Memories</a></li>
                 </ul>
             </div>
-                
         </div>
+        <span class="navbar-text">
+            <a href="#profile">
+                <i class="fa fa-user-circle" aria-hidden="true"></i>
+            </a>
+        </span>
     </nav>
 
     <header class="jumbotron">
@@ -96,48 +100,26 @@
         <div id="calendar"></div>
     </div>
     
-
     <footer class="footer fixed-bottom">
         <div class="container">
-            <div class="row">             
-                <div class="col-4 offset-1 col-sm-2">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="./contactus.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-7 col-sm-5">
-                    <h5>Our Address</h5>
-                    <address>
-		              121, Clear Water Bay Road<br>
-		              Clear Water Bay, Kowloon<br>
-		              HONG KONG<br>
-		                <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
-                        <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
-                        <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
-		           </address>
-                </div>
-                <div class="col-12 col-sm-4 align-self-center">
-                    <div class="text-center">
-                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o fa-lg"></i></a>
+            <div class="row justify-content-center">
+                <nav>
+                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-chat-tab" data-toggle="tab" href="#chat" role="tab" aria-controls="nav-chat" aria-selected="true">Chat</a>
+                        <a class="nav-item nav-link" id="nav-schedule-tab" data-toggle="tab" href="#schedule" role="tab" aria-controls="nav-schedule" aria-selected="false">Schedule</a>
+                        <a class="nav-item nav-link" id="nav-tasks-tab" data-toggle="tab" href="#tasks" role="tab" aria-controls="nav-tasks" aria-selected="false">Tasks</a>
+                        <a class="nav-item nav-link" id="nav-memories-tab" data-toggle="tab" href="#memories" role="tab" aria-controls="nav-about" aria-selected="false">Memories</a>
                     </div>
-                </div>
+                </nav>
            </div>
            <div class="row justify-content-center">             
                 <div class="col-auto">
-                    <p>© Copyright 2018 Ristorante Con Fusion</p>
+                    <p>© Copyright 2020 Damon Clemons</p>
                 </div>
            </div>
-        </div>
+        </div>    
     </footer>
+    
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
