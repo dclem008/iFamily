@@ -26,7 +26,7 @@ $carousel-item-height: 300px;
 
 .footer {
     background-color: $background-pale;
-    @include zero-margin(20px, 0px);
+    @include zero-margin(5px, 0px);
 
     .row {
         top: 0;
@@ -108,7 +108,7 @@ body {
 #navBarDiv {
     min-height: 100%;
     background-color: $navbar-menu-background;
-    width: 35%;
+    width: 30%;
     float: left;
     overflow-y: auto;
     overflow-x: hidden;
