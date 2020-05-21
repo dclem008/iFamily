@@ -151,6 +151,23 @@ body {
   .loginLinkIcon :hover {
     text-decoration: none; }
 
+.zoom {
+  transition: all 0.2s ease; }
+
+.zoom:hover {
+  -ms-transform: scale(1.01);
+  /* IE 9 */
+  -webkit-transform: scale(1.01);
+  /* Safari 3-8 */
+  transform: scale(1.01); }
+
+.zoom:active {
+  -ms-transform: scale(1.01);
+  /* IE 9 */
+  -webkit-transform: scale(1.01);
+  /* Safari 3-8 */
+  transform: scale(1.01); }
+
 #navBarDiv {
   min-height: 100%;
   background-color: #ffc4cd;
@@ -187,7 +204,6 @@ body {
           -moz-box-shadow: 0 0 10px #9c85ec;
           -webkit-box-shadow: 0 0 10px #9c85ec;
           box-shadow: 0 0 10px #9c85ec;
-          transition: all 0.3s ease;
           background-color: #FFB6C1; }
         #navBarDiv .container #navBarMenu .chat_list .chat_nav .chat_family {
           border-bottom: 1px solid #05728f;
