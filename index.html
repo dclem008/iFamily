@@ -25,7 +25,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <span class="navbar-text">
-                <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
+                <a href="#" class="profileIcon"><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
             </span>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
@@ -44,7 +44,7 @@
                 <a href="#profile">
                     <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
                 </a>
-                <a id="loginLink" href="#">
+                <a id="loginLink" class="nav-item justify-content-center loginLink" href="#">
                     <span class="fa fa-sign-in"></span> Login
                 </a>
             </span>
@@ -388,9 +388,12 @@
             </button>
             <div class="row collapse navbar-collapse" id="navBarMenu">
                 <div class="chat_list">
-                    <div class="nav navbar-header justify-content-center">
-                        <span class="navbar-brand mb-0 h1" id="chatsIcon">
-                            <a href="#"><i class="fa fa-users fa-lg" aria-hidden="true"></i> Chats</a>
+                    <div class="nav navbar-header">
+                        <span class="navbar-brand mb-0 h1 col-4" id="chatsIcon">
+                            <i class="fa fa-users fa-lg" aria-hidden="true"></i>
+                        </span>
+                        <span class="navbar-brand mb-0 h1 col-4" id="chatsIcon2">
+                            <a href="#">Chats</a>
                         </span>
                         <span class="navbar-brand ml-auto">
                             <a id="addUser" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
@@ -402,32 +405,34 @@
                                 <div class="col-4 chat_img">
                                     <img src="https://ptetutorials.com/images/user-profile.png" class="img-fluid"
                                         alt="sunil">
+                                    <a href="#" class="stretched-link"></a>
                                 </div>
                                 <div class="col-8 chat_ib">
                                     <h5>Family 1 <span class="chat_date">April 11</span></h5>
                                     <p>Remember to get your tasks done today!</p>
+                                    <a href="#" class="stretched-link"></a>
                                 </div>
                             </div>
                             <div class="row chat_family">
                                 <div class="col-4 chat_img">
                                     <img src="img/profile-pic-2.png" class="img-fluid" alt="sunil">
+                                    <a href="#" class="stretched-link"></a>
                                 </div>
                                 <div class="col-8 chat_ib">
-                                    <a href="#">
-                                        <h5>Family 2 <span class="chat_date">April 10</span></h5>
-                                    </a>
+                                    <h5>Family 2 <span class="chat_date">April 10</span></h5>
                                     <p>Remember to get your tasks done today!</p>
+                                    <a href="#" class="stretched-link"></a>
                                 </div>
                             </div>
                             <div class="row chat_family">
                                 <div class="col-4 chat_img">
                                     <img src="img/profile-pic-3.png" class="img-fluid" alt="sunil">
+                                    <a href="#" class="stretched-link"></a>
                                 </div>
                                 <div class="col-8 chat_ib">
-                                    <a href="#">
                                         <h5>Family 3 <span class="chat_date">April 4</span></h5>
-                                    </a>
                                     <p>Remember to get your tasks done today!</p>
+                                    <a href="#" class="stretched-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -600,7 +605,7 @@
             </div>
             <div class="tab-pane fade" id="memories" role="tabpanel" aria-labelledby="nav-memories-tab">
                 <div id="memoriesContent">
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center memoryHeader">
                         <h5>Memories</h5>
                     </div>
                     <div class="row row-content">
@@ -662,42 +667,47 @@
                     <div class="row row-content">
                         <div class="row card-images">
                             <div class="card-deck">
-                                <div class="card col-md-5 col-12">
+                                <div class="card col-md-5 col-9">
                                     <img class="card=img-top" src="img/family.png" height="250" alt="family 1">
                                     <div class="card-body">
                                         <p class="card-text">Caption: Family, February 2018</p>
                                         <span>Tags: Person 1, Person 2, Person 3</span>
+                                        <a href="#" class="stretched-link"></a>
                                     </div>
                                 </div>
-                                <div class="card col-md-5 col-12">
+                                <div class="card col-md-5 col-9">
                                     <img class="card=img-top" src="img/family.png" height="250" alt="family 1">
                                     <div class="card-body">
                                         <p class="card-text">Caption: Family, February 2018</p>
                                         <span>Tags: Person 1, Person 2, Person 3</span>
+                                        <a href="#" class="stretched-link"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-deck">
-                                <div class="card col-md-5 col-12">
+                                <div class="card col-md-5 col-9">
                                     <img class="card=img-top" src="img/family.png" height="250" alt="family 1">
                                     <div class="card-body">
                                         <p class="card-text">Caption: Family, February 2018</p>
                                         <span>Tags: Person 1, Person 2, Person 3</span>
+                                        <a href="#" class="stretched-link"></a>
                                     </div>
                                 </div>
-                                <div class="card col-md-5 col-12">
+                                <div class="card col-md-5 col-9">
                                     <img class="card=img-top" src="img/family.png" height="250" alt="family 1">
                                     <div class="card-body">
                                         <p class="card-text">Caption: Family, February 2018</p>
                                         <span>Tags: Person 1, Person 2, Person 3</span>
+                                        <a href="#" class="stretched-link"></a>
                                     </div>
                                 </div>
                             </div>
-                                <div class="card col-md-5 col-12">
+                                <div class="card col-md-5 col-9">
                                     <img class="card=img-top" src="img/family.png" height="250" alt="family 1">
                                     <div class="card-body">
                                         <p class="card-text">Caption: Family, February 2018</p>
                                         <span>Tags: Person 1, Person 2, Person 3</span>
+                                        <a href="#" class="stretched-link"></a>
                                     </div>
                                 </div>
                         </div>

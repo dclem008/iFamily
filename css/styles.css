@@ -17,7 +17,9 @@
   .footer .row {
     top: 0; }
   .footer .nav-link {
-    background-color: #ffff; }
+    background-color: #ffff;
+    color: #292222;
+    width: 95px; }
   .footer .active, .footer .nav-link:hover {
     background: linear-gradient(45deg, #fff0f2, #fff7f8, #ffff);
     -moz-box-shadow: 0 0 10px #ccc;
@@ -124,8 +126,11 @@ body {
 
 #navHeader {
   margin-left: 0;
-  border: 1px solid #05728f;
-  background: linear-gradient(45deg, #E75480, #FF7EBE, #F5D0E2); }
+  border: 1px solid;
+  background: linear-gradient(45deg, #E75480, #FF7EBE, #F5D0E2);
+  -moz-box-shadow: 0 0 10px #9c85ec;
+  -webkit-box-shadow: 0 0 10px #9c85ec;
+  box-shadow: 0 0 10px #9c85ec; }
   #navHeader .container {
     margin-left: 0;
     min-width: 100%; }
@@ -133,6 +138,18 @@ body {
       margin-right: 0; }
     #navHeader .container .fa {
       margin-right: 5px; }
+  #navHeader .nav-item {
+    border-radius: 15px; }
+  #navHeader .nav-item:hover {
+    -moz-box-shadow: 0 0 10px #eceaf3;
+    -webkit-box-shadow: 0 0 10px #e5e3ee;
+    box-shadow: 0 0 10px #ebeaf0; }
+
+.loginLinkIcon {
+  padding: 30px;
+  text-align: center; }
+  .loginLinkIcon :hover {
+    text-decoration: none; }
 
 #navBarDiv {
   min-height: 100%;
@@ -160,9 +177,17 @@ body {
         #navBarDiv .container #navBarMenu .chat_list .navbar-header {
           border-bottom: 1px solid #05728f;
           padding: 5px 10px 10px 10px;
-          background: linear-gradient(45deg, #ffc4cd, #ffbdc7, #F5D0E2);
-          border-radius: 5px; }
+          background: linear-gradient(45deg, #ffc4cd, #ffbdc7, #ffc4cd);
+          border-radius: 5px;
+          -moz-box-shadow: 0 0 10px #9c85ec;
+          -webkit-box-shadow: 0 0 10px #9c85ec;
+          box-shadow: 0 0 10px #9c85ec;
+          transition: all 0.3s ease; }
         #navBarDiv .container #navBarMenu .chat_list .chat_nav .chat_family:hover {
+          -moz-box-shadow: 0 0 10px #9c85ec;
+          -webkit-box-shadow: 0 0 10px #9c85ec;
+          box-shadow: 0 0 10px #9c85ec;
+          transition: all 0.3s ease;
           background-color: #FFB6C1; }
         #navBarDiv .container #navBarMenu .chat_list .chat_nav .chat_family {
           border-bottom: 1px solid #05728f;
@@ -201,8 +226,19 @@ body {
   border-radius: 16px 16px 16px 16px;
   background-color: #E75480; }
 
-#chatsIcon a {
-  color: #05728f; }
+#chatsIcon i {
+  color: #05728f;
+  margin-left: 0; }
+
+#chatsIcon2 a {
+  color: #05728f;
+  position: relative; }
+
+.profileIcon:hover {
+  -moz-box-shadow: 0 0 10px #eceaf3;
+  -webkit-box-shadow: 0 0 10px #e5e3ee;
+  box-shadow: 0 0 10px #ebeaf0;
+  border-radius: 25px; }
 
 .mesgs {
   width: 100%;
@@ -460,3 +496,7 @@ body {
 
 .user-images img {
   margin-left: -5px; }
+
+.memoryHeader {
+  border-bottom: 1px solid #f5e8eb;
+  margin-left: 10px; }

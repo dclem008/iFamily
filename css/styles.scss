@@ -36,6 +36,9 @@ $carousel-item-height: 300px;
     }
     .nav-link {
         background-color: #ffff;
+        color: rgb(41, 34, 34);
+        width:95px;
+        //border-radius: 15px;
     }
     .active, .nav-link:hover {
         background:linear-gradient(45deg, #fff0f2, #fff7f8, #ffff);
@@ -169,8 +172,12 @@ body {
 
 #navHeader {
     margin-left: 0;
-    border: 1px solid $blue-color;
+    border: 1px solid;
     background:linear-gradient(45deg, $background-dark, #FF7EBE, #F5D0E2);
+    -moz-box-shadow: 0 0 10px rgb(156, 133, 236);
+    -webkit-box-shadow: 0 0 10px rgb(156, 133, 236);
+    box-shadow: 0 0 10px rgb(156, 133, 236);
+    
 
     .container {
         margin-left: 0;
@@ -183,6 +190,22 @@ body {
         .fa {
             margin-right: 5px;
         }
+    }
+    .nav-item {
+        border-radius: 15px;
+    }
+    .nav-item:hover {
+        -moz-box-shadow: 0 0 10px rgb(236, 234, 243);
+    -webkit-box-shadow: 0 0 10px rgb(229, 227, 238);
+    box-shadow: 0 0 10px rgb(235, 234, 240);
+    }
+}
+
+.loginLinkIcon {
+    padding: 30px;
+    text-align: center;
+    :hover {
+        text-decoration: none;
     }
 }
 
@@ -213,11 +236,19 @@ body {
                 .navbar-header {
                     border-bottom: 1px solid $blue-color;
                     padding: 5px 10px 10px 10px;
-                    background:linear-gradient(45deg, $navbar-menu-background, #ffbdc7, #F5D0E2);
+                    background:linear-gradient(45deg, $navbar-menu-background, #ffbdc7, $navbar-menu-background);
                     border-radius: 5px;
+                    -moz-box-shadow: 0 0 10px rgb(156, 133, 236);
+                    -webkit-box-shadow: 0 0 10px rgb(156, 133, 236);
+                    box-shadow: 0 0 10px rgb(156, 133, 236);
+                    transition: all 0.3s ease;
                 }
                 .chat_nav {
                     .chat_family:hover {
+                        -moz-box-shadow: 0 0 10px rgb(156, 133, 236);
+                        -webkit-box-shadow: 0 0 10px rgb(156, 133, 236);
+                        box-shadow: 0 0 10px rgb(156, 133, 236);
+                        transition: all 0.3s ease;
                         background-color: #FFB6C1;
                     }
                     .chat_family {
@@ -271,8 +302,22 @@ body {
   background-color: #E75480;
 }
 
-#chatsIcon a {
+#chatsIcon i {
     color: $blue-color;
+    margin-left: 0;
+}
+#chatsIcon2 a {
+    color: $blue-color;
+    position: relative;
+    //text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+
+.profileIcon:hover {
+    -moz-box-shadow: 0 0 10px rgb(236, 234, 243);
+    -webkit-box-shadow: 0 0 10px rgb(229, 227, 238);
+    box-shadow: 0 0 10px rgb(235, 234, 240);
+    border-radius: 25px;
 }
 
 .mesgs {
@@ -569,4 +614,9 @@ body {
 
 .user-images img {
     margin-left: -5px
+}
+
+.memoryHeader {
+    border-bottom: 1px solid #f5e8eb;
+    margin-left: 10px;
 }
