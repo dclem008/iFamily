@@ -18,11 +18,11 @@
     top: 0; }
   .footer .nav-link {
     background-color: #ffff; }
-  .footer .nav-link:hover {
+  .footer .active, .footer .nav-link:hover {
     background: linear-gradient(45deg, #fff0f2, #fff7f8, #ffff);
     -moz-box-shadow: 0 0 10px #ccc;
     -webkit-box-shadow: 0 0 10px #ccc;
-    box-shadow: 0 0 10px #ccc; }
+    box-shadow: 0 0 10px #05728f; }
 
 .jumbotron {
   margin: 0px auto;
@@ -306,10 +306,15 @@ body {
   .card-images .card {
     margin-bottom: 30px;
     margin-right: 30px; }
+    .card-images .card .card-body {
+      visibility: hidden; }
   .card-images .card:hover {
     -moz-box-shadow: 0 0 10px #9c85ec;
     -webkit-box-shadow: 0 0 10px #9c85ec;
-    box-shadow: 0 0 10px #9c85ec; }
+    box-shadow: 0 0 10px #9c85ec;
+    transition: all 0.3s ease; }
+    .card-images .card:hover .card-body {
+      visibility: visible; }
 
 #scheduleContent {
   padding-top: 40px;
