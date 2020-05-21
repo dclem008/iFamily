@@ -1,9 +1,10 @@
 $lt-gray: #ddd;
 $background-dark: #E75480;
 $background-light: #FFB6C1;
-$modal-background-light: #ffe1e6;
+$modal-background-light: floralwhite;
 $navbar-menu-background: #ffc4cd;
 $background-pale: #fff0f2;
+$blue-color: #05728f;
 
 //Height variables
 $carousel-item-height: 300px;
@@ -26,10 +27,21 @@ $carousel-item-height: 300px;
 
 .footer {
     background-color: $background-pale;
+    height: 95px;
+    border-top: 1px solid $blue-color;
     @include zero-margin(5px, 0px);
 
     .row {
         top: 0;
+    }
+    .nav-link {
+        background-color: #ffff;
+    }
+    .nav-link:hover {
+        background:linear-gradient(45deg, #fff0f2, #fff7f8, #ffff);
+        -moz-box-shadow: 0 0 10px #ccc;
+      -webkit-box-shadow: 0 0 10px #ccc;
+      box-shadow: 0 0 10px #ccc;
     }
 }
 
@@ -55,10 +67,7 @@ body {
 }
 
 .tab-content {
-    border-left: 1px solid $lt-gray;
-    border-right: 1px solid $lt-gray;
-    border-bottom: 1px solid $lt-gray;
-    padding: 10px;
+    padding: 1px;
 }
 
 .carousel {
@@ -90,49 +99,129 @@ body {
     z-index: 1;
 }
 
-.modal {
-    .modal-header {
+.modal-header {
+    background-color: $background-dark;
+    color: floralwhite;
+}
+
+.modal-body {
+    background-color: $modal-background-light;
+}
+
+.modal-login {
+
+    .modal-header-login {
         background-color: $background-dark;
         color: floralwhite;
-    
-        .close {
-            color: floralwhite;
-        }
+        width: 25%;
     }
+        .flex-column {
+            
+        }
+        .span-app-title {
+            display: block;
+	        color: var(--color-white);
+	        font-weight: bold;
+        }
 
     .modal-body {
         background-color: $modal-background-light;
+
+        .modal-body-content {
+            margin-top: 4%;
+            margin-left: 5%;
+            margin-bottom: 5%;
+        }
+    }
+    .close {
+        color: black;
+        border-color: transparent;
+        border-style: hidden;
+        border-radius: 50%;
+        top:0;
+        right:0;
+        height: 10px;
+        margin: 5px 5px 0px 15px;
+    }
+    .fa {
+        margin-right: 10px;
+    }
+    .checkbox-round {
+        width: 1.1em;
+        height: 1.1em;
+        background-color: white;
+        border-radius: 50%;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    .checkbox-round:checked {
+        background-color: gray;
+    }
+}
+
+#tasksContent {
+    min-width: 100%;
+}
+
+#navHeader {
+    margin-left: 0;
+    border: 1px solid $blue-color;
+    background:linear-gradient(45deg, $background-dark, #FF7EBE, #F5D0E2);
+
+    .container {
+        margin-left: 0;
+        min-width: 100%;
+        
+        #loginHeader {
+            margin-right: 0;
+        }
+
+        .fa {
+            margin-right: 5px;
+        }
     }
 }
 
 #navBarDiv {
     min-height: 100%;
     background-color: $navbar-menu-background;
+    background:linear-gradient(45deg, #ffcbd3, #ffcbd3, #fff7f8);
     width: 30%;
     float: left;
     overflow-y: auto;
     overflow-x: hidden;
+    border-left: 1px solid $blue-color;
 
     .container {
         padding-left: 0;
         #navBarMenu {
             width: 100%;
-            min-height: 100%;
+            min-height: 77%;
             z-index: 2;
-            top: 0;
+            top: 5px;
             position: absolute;
+            border-right: 2px solid $blue-color;
             .chat_list {
                 width:100%;
                 min-height: 100%;
                 position: absolute;
                 top:0;
                 .navbar-header {
-                    border-bottom: 2px solid #05728f;
+                    border-bottom: 1px solid $blue-color;
                     padding: 5px 10px 10px 10px;
+                    background:linear-gradient(45deg, $navbar-menu-background, #ffbdc7, #F5D0E2);
+                    border-radius: 5px;
                 }
                 .chat_nav {
+                    .chat_family:hover {
+                        background-color: #FFB6C1;
+                    }
                     .chat_family {
-                        border-bottom: 2px solid #1339b6;
+                        border-bottom: 1px solid $blue-color;
                         margin: 0;
                         padding: 18px 3px 5px;
                         width:100%;
@@ -141,6 +230,7 @@ body {
                             width: 15%;
                             img {
                                 width: 100%;
+                                border-radius: 50%;
                             }
                         }
                         .chat_ib {
@@ -168,9 +258,46 @@ body {
     }
     
 }
+#addUser i {
+    color: $blue-color;
+}
+#addUser:hover {
+    -moz-border-radius-topleft: 16px;
+  -moz-border-radius-topright: 16px;
+  -moz-border-radius-bottomright: 16px;
+  -moz-border-radius-bottomleft: 16px;
+  -webkit-border-radius: 16px 16px 16px 16px;
+  border-radius: 16px 16px 16px 16px;
+  background-color: #E75480;
+}
+
+#chatsIcon a {
+    color: $blue-color;
+}
+
+.mesgs {
+    width:100%;
+    height:100%;
+    position: relative;
+}
+
+.mesgs::after {
+    content: "";
+    height:auto;
+    background: url('../img/cloud-background.jpg');
+    background-repeat: repeat;
+    width:100%;
+    opacity: 0.6;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    position: absolute;
+    z-index: -1;
+}
 
 #input_msg {
-    bottom: 17%;
+    bottom: 13%;
     position: sticky;
     .col {
         width: 100%;
@@ -188,7 +315,7 @@ body {
 
 .type_msg {border-top: 1px solid #E75480;position: relative;}
 .msg_send_btn {
-  background: #05728f none repeat scroll 0 0;
+  background: $blue-color none repeat scroll 0 0;
   border: medium none;
   border-radius: 50%;
   color: #fff;
@@ -225,7 +352,7 @@ body {
   .received_withd_msg { width: 57%;}
   
    .sent_msg p {
-    background: #05728f none repeat scroll 0 0;
+    background: $blue-color none repeat scroll 0 0;
     border-radius: 3px;
     font-size: 14px;
     margin: 0; color:#fff;
@@ -240,7 +367,197 @@ body {
 
   .tab-pane {
     float: right;
-    padding: 30px 15px 120px 25px;
-    width: 65%;
+    padding: 15px 1px 95px 15px;
+    width: 70%;
+  }
+
+  .card-images {
+    width:100%;
+    margin-left: 20px;
+    .card {
+        margin-bottom: 30px;
+        margin-right: 30px;
+    }
+    .card:hover {
+        -moz-box-shadow: 0 0 10px rgb(156, 133, 236);
+        -webkit-box-shadow: 0 0 10px rgb(156, 133, 236);
+        box-shadow: 0 0 10px rgb(156, 133, 236);
+    }
+  }
+
+  #scheduleContent {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-width: 100%;
+    min-height: 100%;
+    .row {
+        margin-left: 0;
+        min-width: 100%;
+        border-bottom: 8px solid #57c4d0;
+        h5 {
+            margin-left: 0;
+            font-size: 150%;
+            
+        }
+    }
+
+    .schedule-list {
+        margin-left: 0;
+        min-width: 100%;
+        float: left;
+
+        .p-3 .d-flex {
+            margin-left: 0;
+            min-width: 100%;
+            border-bottom: 1px solid #57c4d0;
+
+            .time_date {
+                margin-right: 0;
+            }
+        }
+    }
+    
   }
   
+.notes {
+    border-top-left-radius: 42px
+}
+
+.dot {
+    height: 6px;
+    width: 6px;
+    margin-left: 8px;
+    margin-right: 3px;
+    margin-top: 2px;
+    background-color: rgb(91, 92, 91);
+    border-radius: 50%;
+    display: inline-block
+}
+
+.review-text {
+    background: #57c4d0;
+    color: #fff
+}
+
+.info {
+    color: #8c8b9a
+}
+
+.dot-red {
+    background-color: #57c4d0 !important;
+    height: 6px;
+    width: 6px;
+    margin-left: 8px;
+    margin-right: 3px;
+    margin-top: 2px;
+    border-radius: 50%;
+    display: inline-block
+}
+
+.overview {
+    color: #57c4d0;
+}
+
+@keyframes click-wave {
+    0% {
+        height: 40px;
+        width: 40px;
+        opacity: 0.15;
+        position: relative
+    }
+
+    100% {
+        height: 200px;
+        width: 200px;
+        margin-left: -80px;
+        margin-top: -80px;
+        opacity: 0
+    }
+}
+
+.option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 10.3px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000
+}
+
+.option-input:hover {
+    background: #9faab7
+}
+
+.option-input:checked {
+    background: #57c4d0
+}
+
+.option-input:checked::before {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    font-size: 16.7px;
+    text-align: center;
+    line-height: 30px
+}
+
+.option-input:checked::after {
+    -webkit-animation: click-wave 0.25s;
+    -moz-animation: click-wave 0.25s;
+    animation: click-wave 0.25s;
+    background: red;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100
+}
+
+.option-input.radio {
+    border-radius: 50%
+}
+
+.option-input.radio::after {
+    border-radius: 50%
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through
+}
+
+.line-text {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    line-height: 0.1em;
+    margin: 10px 0 20px
+}
+
+.line-text span {
+    background: #fff;
+    padding: 0 10px;
+    color: #212529
+}
+
+.user-images img {
+    margin-left: -5px
+}

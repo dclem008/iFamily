@@ -1,52 +1,103 @@
-$(document).ready(function() {
-    $("#mycarousel").carousel( { interval: 2000 } );
-    $("#carouselButton").click(function(){
+$(document).ready(function () {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    var time = (((today.getHours() + 1) % 12) + ":" + today.getMinutes() + " " + (today.getHours() > 11 ? 'PM' : 'AM'));
+
+    today = mm + '/' + dd + '/' + yyyy;
+    document.getElementById("todayDate").innerHTML = today;
+
+    let families = { 0: 'Choose..', id1: 'Family 1', id2: 'Family 2', id3: 'Family 3' };
+    let select = document.getElementById("familyGroup");
+
+    for (let key in families) {
+        let opt = document.createElement('option');
+        opt.value = key;
+        opt.innerHTML = families[key];
+        select.appendChild(opt);
+    }
+    
+    $("#mycarousel").carousel({ interval: 2000 });
+    $("#carouselButton").click(function () {
         if ($("#carouselButton").children('span').hasClass('fa-pause')) {
             $("#mycarousel").carousel('pause');
             $("#carouselButton").children('span').removeClass('fa-pause');
             $("#carouselButton").children('span').addClass('fa-play');
         }
-        else if ($("#carouselButton").children('span').hasClass('fa-play')) { 
+        else if ($("#carouselButton").children('span').hasClass('fa-play')) {
             $("#mycarousel").carousel('cycle');
             $("#carouselButton").children('span').removeClass('fa-play');
             $("#carouselButton").children('span').addClass('fa-pause');
         }
-        
+
     });
 
-    $("#loginLink").click(function() {
+    $("#loginLink").click(function () {
         $("#loginModal").modal('toggle');
     });
-    
-    $("#reserveButton").click(function() {
+
+    $("#reserveButton").click(function () {
         $("#reserveModal").modal('toggle');
     });
 
-    $("#scheduleLink").click(function() {
+    $("#scheduleLink").click(function () {
         $("#scheduleModal").modal('toggle');
     });
 
-    $("#addPhotoButton").click(function() {
+    $("#addPhotoButton").click(function () {
         $("#addPhotoModal").modal('toggle');
     });
 
-    var families = {0: 'Choose..',  id1:'Family 1', id2:'Family 2', id3:'Family 3'};
-    
-    $("#addUser").click(function() {
-        $("#addUserModal").modal('toggle');
-        var select = document.getElementById('familyGroup');
-        
 
-        for (var key in families){
-          var opt = document.createElement('option');
-          opt.value = key;
-          opt.innerHTML = families[key];
-          select.appendChild(opt);
+    $("#addUser").click(function () {
+        $("#addUserModal").modal('toggle');
+    });
+
+    const validation = () => {
+        let textInput = document.getElementById("messageInput").value;
+        if (textInput === '' || textInput === null) {
+            alert("Please fill all fields...!!!!!!");
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    $('.msg_send_btn').click(function () {
+        if (validation) {
+            var tempScrollTop = $(window).scrollTop();
+            let text = document.getElementById("messageInput").value;
+
+            var msgHistoryDiv = document.getElementById("messageHistory");
+            var outGoingDiv = document.createElement('div');
+            outGoingDiv.className = 'outgoing_msg';
+
+            var sentMsgDiv = document.createElement('div');
+            sentMsgDiv.className = 'sent_msg';
+
+            var textParagraph = document.createElement('p');
+            textParagraph.innerHTML = text;
+
+            var spanDate = document.createElement('span');
+            spanDate.className = 'time_date';
+            spanDate.innerHTML = time + " | " + "Today"; //today
+
+            sentMsgDiv.appendChild(textParagraph);
+            sentMsgDiv.appendChild(spanDate);
+
+            outGoingDiv.appendChild(sentMsgDiv);
+
+            msgHistoryDiv.appendChild(outGoingDiv);
+
+            $(window).scrollTop($(document).height());
+            document.getElementById("messageInput").value = "";
+            event.preventDefault();
         }
     });
 
-    $("#CancelButton").click(function() {
-        var select = document.getElementById('innerCarousel');  
+    $("#CancelButton").click(function () {
+        var select = document.getElementById('innerCarousel');
 
         //if there is more than one image uploaded, may need list of createdElements for each image
         //add carousel div
@@ -66,9 +117,9 @@ $(document).ready(function() {
         //title may equal date of photo, or vice versa w/caption
         var innerDiv = document.createElement('div');
         innerDiv.className = "carousel-caption d-none d-md-block";
-       
+
         var header = document.createElement('h2');
-        header.innerHTML = "May 03 2020";
+        header.innerHTML = today;
 
         var caption = document.createElement('p');
         caption.className = "d-none d-sm-block";
@@ -91,6 +142,16 @@ $(document).ready(function() {
         indicatorList.appendChild(addIndicator);
 
     });
-    
+
+    $('input[type=checkbox]').change(function () {
+
+        if (this.checked) {
+            $(this).next(".label-text").css("text-decoration-line", "line-through");
+        } else {
+            $(this).next(".label-text").css("text-decoration-line", "none");
+        }
+
+    });
+
 });
 
