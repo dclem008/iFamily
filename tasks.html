@@ -3,17 +3,17 @@
 
 <head>
     <!-- Required meta tags always come first -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-    
-        <!-- Bootstrap CSS -->
-        <!-- build:css css/main.css -->
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-        <link rel="stylesheet" href="css/styles.css">
-        <!-- endbuild -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- endbuild -->
     <title>Schedule</title>
 
 </head>
@@ -24,21 +24,29 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand mr-auto" href="./index.html"><img src="img/logo.png" height="30" width="41"></a>
+            <span class="navbar-text">
+                <a href="#profile">
+                    <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
+                </a>
+            </span>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./schedule.html"><i class="fa fa-calendar" aria-hidden="true"></i> Schedule</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Tasks</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./memoryBook.html"><i class="fa fa-book" aria-hidden="true"></i> Memories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span>
+                            Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./schedule.html"><i class="fa fa-calendar"
+                                aria-hidden="true"></i> Schedule</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><span
+                                class="fa fa-check-circle-o fa-lg"></span> Tasks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./memoryBook.html"><i class="fa fa-camera"
+                                aria-hidden="true"></i> Memories</a></li>
                 </ul>
             </div>
+            <span class="navbar-text">
+                <a href="#profile">
+                    <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
+                </a>
+            </span>
         </div>
-        <span class="navbar-text">
-            <a href="#profile">
-                <i class="fa fa-user-circle" aria-hidden="true"></i>
-            </a>
-        </span>
     </nav>
 
     <header class="jumbotron">
@@ -46,7 +54,8 @@
             <div class="row row-header">
                 <div class="col-12 col-sm-6">
                     <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our
+                        lipsmacking creations will tickle your culinary senses!</p>
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <img src="img/logo.png" class="img-fluid">
@@ -87,36 +96,56 @@
                     <div class="p-2 bg-white">
                         <h6 class="line-text"><span>Shared with</span></h6>
                     </div>
-                    <div class="d-flex justify-content-center p-2 bg-white user-images"><img
-                            class="rounded-circle" src="https://i.imgur.com/rQMmlf6.jpg" width="40"><img
-                            class="rounded-circle" src="https://i.imgur.com/zE0TPlF.jpg" width="40"><img
-                            class="rounded-circle" src="https://i.imgur.com/rCAhOXi.jpg" width="40"><img
-                            class="rounded-circle" src="https://i.imgur.com/28GMrS0.jpg" width="40"></div>
+                    <div class="d-flex justify-content-center p-2 bg-white user-images"><img class="rounded-circle"
+                            src="https://i.imgur.com/rQMmlf6.jpg" width="40"><img class="rounded-circle"
+                            src="https://i.imgur.com/zE0TPlF.jpg" width="40"><img class="rounded-circle"
+                            src="https://i.imgur.com/rCAhOXi.jpg" width="40"><img class="rounded-circle"
+                            src="https://i.imgur.com/28GMrS0.jpg" width="40"></div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <footer class="footer">
         <div class="container">
             <div class="row justify-content-center">
                 <nav>
                     <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link" id="nav-chat-tab" data-toggle="tab" href="#chat" role="tab" aria-controls="nav-chat" aria-selected="true">Chat</a>
-                        <a class="nav-item nav-link" id="nav-schedule-tab" data-toggle="tab" href="#schedule" role="tab" aria-controls="nav-schedule" aria-selected="false">Schedule</a>
-                        <a class="nav-item nav-link active" id="nav-tasks-tab" data-toggle="tab" href="#tasks" role="tab" aria-controls="nav-tasks" aria-selected="false">Tasks</a>
-                        <a class="nav-item nav-link" id="nav-memories-tab" data-toggle="tab" href="#memories" role="tab" aria-controls="nav-about" aria-selected="false">Memories</a>
+                        <a class="nav-item nav-link zoom" id="nav-chat-tab" data-toggle="tab" href="#chat" role="tab"
+                            aria-controls="nav-chat" aria-selected="true">
+                            <div class="row">
+                                <i class="fa fa-commenting col-12" aria-hidden="true"></i>
+                            </div>Chat
+                        </a>
+                        <a class="nav-item nav-link zoom" id="nav-schedule-tab" data-toggle="tab" href="#schedule"
+                            role="tab" aria-controls="nav-schedule" aria-selected="false">
+                            <div class="row">
+                                <i class="fa fa-calendar col-12" aria-hidden="true"></i>
+                            </div>Schedule
+                        </a>
+                        <a class="nav-item nav-link active zoom" id="nav-tasks-tab" data-toggle="tab" href="#tasks"
+                            role="tab" aria-controls="nav-tasks" aria-selected="false">
+                            <div class="row">
+                                <i class="fa fa-check-circle-o col-12" aria-hidden="true"></i>
+                            </div>Tasks
+                        </a>
+                        <a class="nav-item nav-link zoom" id="nav-memories-tab" data-toggle="tab" href="#memories"
+                            role="tab" aria-controls="nav-about" aria-selected="false">
+                            <div class="row">
+                                <i class="fa fa-camera col-12" aria-hidden="true"></i>
+                            </div>Memories
+                        </a>
                     </div>
                 </nav>
-           </div>
-           <div class="row justify-content-center">             
+            </div>
+            <div class="row justify-content-center">
                 <div class="col-auto">
-                    <p>© Copyright 2020 Damon Clemons</p>
+                    <p>&#169; Copyright 2020 Damon Clemons</p>
                 </div>
-           </div>
-        </div>    
+            </div>
+        </div>
     </footer>
-    
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
@@ -124,7 +153,7 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
     <!-- endbuild -->
-    
+
 </body>
 
 </html>

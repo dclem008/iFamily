@@ -24,13 +24,17 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand mr-auto" href="./index.html"><img src="img/logo.png" height="30" width="41"></a>
+            <span class="navbar-text">
+                <a href="#profile" class="profileIcon">
+                    <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
+                </a>
+            </span>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="./schedule.html"><i class="fa fa-calendar" aria-hidden="true"></i> Schedule</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./tasks.html"><span class="fa fa-list fa-lg"></span> Tasks</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-book" aria-hidden="true"></i> Memories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./tasks.html"><span class="fa fa-check-circle-o fa-lg"></span> Tasks</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-camera" aria-hidden="true"></i> Memories</a></li>
                 </ul>
             </div>
             <span class="navbar-text">
@@ -59,7 +63,7 @@
         <div class="modal-dialog modal-md" role="content">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Add to Memory Book <i class="fa fa-book" aria-hidden="true"></i></h4>
+                    <h4 class="modal-title">Add to Memory Book <i class="fa fa-camera" aria-hidden="true"></i></h4>
                     <button type="button" class="close" data-dismiss="modal">
                         &times;
                     </button>
@@ -123,8 +127,8 @@
                 <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
                 <li class="breadcrumb-item active">Memory Book</li>
             </ol>
-            <div class="col-12 justify-content-center">
-               <h3>Memories&#33;</h3>
+            <div class="col-12">
+               <h3 class="center-text">Memories&#33;</h3>
                <hr>
             </div>
         </div>
@@ -182,10 +186,22 @@
             <div class="row justify-content-center">
                 <nav>
                     <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link" id="nav-chat-tab" data-toggle="tab" href="#chat" role="tab" aria-controls="nav-chat" aria-selected="true">Chat</a>
-                        <a class="nav-item nav-link" id="nav-schedule-tab" data-toggle="tab" href="#schedule" role="tab" aria-controls="nav-schedule" aria-selected="false">Schedule</a>
-                        <a class="nav-item nav-link" id="nav-tasks-tab" data-toggle="tab" href="#tasks" role="tab" aria-controls="nav-tasks" aria-selected="false">Tasks</a>
-                        <a class="nav-item nav-link active" id="nav-memories-tab" data-toggle="tab" href="#memories" role="tab" aria-controls="nav-about" aria-selected="false">Memories</a>
+                        <a class="nav-item nav-link zoom" id="nav-chat-tab" data-toggle="tab" href="#chat" role="tab" aria-controls="nav-chat" aria-selected="true">
+                            <div class="row">
+                                <i class="fa fa-commenting col-12" aria-hidden="true"></i>
+                            </div>Chat</a>
+                        <a class="nav-item nav-link zoom" id="nav-schedule-tab" data-toggle="tab" href="#schedule" role="tab" aria-controls="nav-schedule" aria-selected="false">
+                            <div class="row">
+                                <i class="fa fa-calendar col-12" aria-hidden="true"></i>
+                            </div>Schedule</a>
+                        <a class="nav-item nav-link zoom" id="nav-tasks-tab" data-toggle="tab" href="#tasks" role="tab" aria-controls="nav-tasks" aria-selected="false">
+                            <div class="row">
+                                <i class="fa fa-check-circle-o col-12" aria-hidden="true"></i>
+                            </div>Tasks</a>
+                        <a class="nav-item nav-link active zoom" id="nav-memories-tab" data-toggle="tab" href="#memories" role="tab" aria-controls="nav-about" aria-selected="false">
+                            <div class="row">
+                                <i class="fa fa-camera col-12" aria-hidden="true"></i>
+                            </div>Memories</a>
                     </div>
                 </nav>
            </div>

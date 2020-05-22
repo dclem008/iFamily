@@ -6,18 +6,25 @@ $(document).ready(function () {
     var time = (((today.getHours() + 1) % 12) + ":" + today.getMinutes() + " " + (today.getHours() > 11 ? 'PM' : 'AM'));
 
     today = mm + '/' + dd + '/' + yyyy;
-    document.getElementById("todayDate").innerHTML = today;
+    if($("#todayDate")){
+        document.getElementById("todayDate").innerHTML = today;
+    }
 
     let families = { 0: 'Choose..', id1: 'Family 1', id2: 'Family 2', id3: 'Family 3' };
-    let select = document.getElementById("familyGroup");
+    if($("#familyGroup")) {
+        let select = document.getElementById("familyGroup");
 
-    for (let key in families) {
-        let opt = document.createElement('option');
-        opt.value = key;
-        opt.innerHTML = families[key];
-        select.appendChild(opt);
+        for (let key in families) {
+            let opt = document.createElement('option');
+            opt.value = key;
+            opt.innerHTML = families[key];
+            select.appendChild(opt);
+        }
     }
-    
+    $('[data-toggle="notificationTooltip"]').tooltip();
+    $('[data-toggle="profileTooltip"]').tooltip();
+    $('[data-toggle="loginTooltip"]').tooltip();
+
     $("#mycarousel").carousel({ interval: 2000 });
     $("#carouselButton").click(function () {
         if ($("#carouselButton").children('span').hasClass('fa-pause')) {
