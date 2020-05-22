@@ -6,12 +6,12 @@ $(document).ready(function () {
     var time = (((today.getHours() + 1) % 12) + ":" + today.getMinutes() + " " + (today.getHours() > 11 ? 'PM' : 'AM'));
 
     today = mm + '/' + dd + '/' + yyyy;
-    if($("#todayDate")){
+    if($("todayDate").length){
         document.getElementById("todayDate").innerHTML = today;
     }
 
     let families = { 0: 'Choose..', id1: 'Family 1', id2: 'Family 2', id3: 'Family 3' };
-    if($("#familyGroup")) {
+    if($("#familyGroup").length) {
         let select = document.getElementById("familyGroup");
 
         for (let key in families) {
@@ -21,7 +21,7 @@ $(document).ready(function () {
             select.appendChild(opt);
         }
     }
-    $('[data-toggle="notificationTooltip"]').tooltip();
+    $('[data-toggle="notificationTooltip"]').popover();
     $('[data-toggle="profileTooltip"]').tooltip();
     $('[data-toggle="loginTooltip"]').tooltip();
 
