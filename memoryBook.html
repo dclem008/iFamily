@@ -38,7 +38,8 @@
                 </ul>
             </div>
             <span class="navbar-text">
-                <a href="#notfications" data-toggle="notificationTooltip" data-placement="bottom" title="Notifications"
+                <a href="./index.html"><i class="fa fa-commenting fa-lg" aria-hidden="true"></i></a>
+                <a href="#notfications" class="ml-3" data-toggle="notificationTooltip" data-placement="bottom" title="Notifications"
                     data-content="You've got (4) New Messages!" data-trigger="focus">
                     <i class="fa fa-bell fa-lg" aria-hidden="true"></i>
                     <span class="badge badge-primary">4</span>
@@ -128,17 +129,13 @@
 
     <div class="container">
         <div class="row">
-            <ol class="col-12 breadcrumb">
-                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                <li class="breadcrumb-item active">Memory Book</li>
-            </ol>
             <div class="col-12">
                <h3 class="center-text">Memories&#33;</h3>
                <hr>
             </div>
         </div>
-        <div class="row row-content">
-            <div class="col">
+        <div class="row row-content justify-content-center">
+            <div class="col-9">
                 <div id="mycarousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox" id="innerCarousel">
                         <div class="carousel-item active">
@@ -184,31 +181,81 @@
                 </div>
             </div>
         </div>
+        <div class="row row-content">
+            <div class="row card-images">
+                <div class="card-deck">
+                    <div class="card col-md-5 col-9 zoom">
+                        <img class="card=img-top" src="img/family.png" height="250" alt="family 1">
+                        <div class="card-body">
+                            <p class="card-text">Caption: Family, February 2018</p>
+                            <span>Tags: Person 1, Person 2, Person 3</span>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="card col-md-5 col-9 zoom">
+                        <img class="card=img-top" src="img/family.png" height="250" alt="family 1">
+                        <div class="card-body">
+                            <p class="card-text">Caption: Family, February 2018</p>
+                            <span>Tags: Person 1, Person 2, Person 3</span>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-deck">
+                    <div class="card col-md-5 col-9 zoom">
+                        <img class="card=img-top" src="img/family.png" height="250" alt="family 1">
+                        <div class="card-body">
+                            <p class="card-text">Caption: Family, February 2018</p>
+                            <span>Tags: Person 1, Person 2, Person 3</span>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="card col-md-5 col-9 zoom">
+                        <img class="card=img-top" src="img/family.png" height="250" alt="family 1">
+                        <div class="card-body">
+                            <p class="card-text">Caption: Family, February 2018</p>
+                            <span>Tags: Person 1, Person 2, Person 3</span>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-md-5 col-9 zoom">
+                    <img class="card=img-top" src="img/family.png" height="250" alt="family 1">
+                    <div class="card-body">
+                        <p class="card-text">Caption: Family, February 2018</p>
+                        <span>Tags: Person 1, Person 2, Person 3</span>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="footer">
         <div class="container">
             <div class="row justify-content-center">
-                <nav>
-                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link zoom" id="nav-chat-tab" data-toggle="tab" href="#chat" role="tab" aria-controls="nav-chat" aria-selected="true">
-                            <div class="row">
-                                <i class="fa fa-commenting col-12" aria-hidden="true"></i>
-                            </div>Chat</a>
-                        <a class="nav-item nav-link zoom" id="nav-schedule-tab" data-toggle="tab" href="#schedule" role="tab" aria-controls="nav-schedule" aria-selected="false">
-                            <div class="row">
-                                <i class="fa fa-calendar col-12" aria-hidden="true"></i>
-                            </div>Schedule</a>
-                        <a class="nav-item nav-link zoom" id="nav-tasks-tab" data-toggle="tab" href="#tasks" role="tab" aria-controls="nav-tasks" aria-selected="false">
-                            <div class="row">
-                                <i class="fa fa-check-circle-o col-12" aria-hidden="true"></i>
-                            </div>Tasks</a>
-                        <a class="nav-item nav-link active zoom" id="nav-memories-tab" data-toggle="tab" href="#memories" role="tab" aria-controls="nav-about" aria-selected="false">
-                            <div class="row">
-                                <i class="fa fa-camera col-12" aria-hidden="true"></i>
-                            </div>Memories</a>
-                    </div>
-                </nav>
+                <div class="col-12">
+                    <nav>
+                        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link zoom col-3" id="nav-chat-tab" data-toggle="tab" href="#chat" role="tab" aria-controls="nav-chat" aria-selected="true">
+                                <div class="row">
+                                    <i class="fa fa-commenting col-12" aria-hidden="true"></i>
+                                </div>Chat</a>
+                            <a class="nav-item nav-link zoom col-3" id="nav-schedule-tab" data-toggle="tab" href="#schedule" role="tab" aria-controls="nav-schedule" aria-selected="false">
+                                <div class="row">
+                                    <i class="fa fa-calendar col-12" aria-hidden="true"></i>
+                                </div>Schedule</a>
+                            <a class="nav-item nav-link zoom col-3" id="nav-tasks-tab" data-toggle="tab" href="#tasks" role="tab" aria-controls="nav-tasks" aria-selected="false">
+                                <div class="row">
+                                    <i class="fa fa-check-circle-o col-12" aria-hidden="true"></i>
+                                </div>Tasks</a>
+                            <a class="nav-item nav-link active zoom col-3" id="nav-memories-tab" data-toggle="tab" href="#memories" role="tab" aria-controls="nav-about" aria-selected="false">
+                                <div class="row">
+                                    <i class="fa fa-camera col-12" aria-hidden="true"></i>
+                                </div>Memories</a>
+                        </div>
+                    </nav>
+                </div>
            </div>
            <div class="row justify-content-center">             
                 <div class="col-auto">

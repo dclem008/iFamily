@@ -1,24 +1,46 @@
 $(document).ready(function () {
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
-    var time = (((today.getHours() + 1) % 12) + ":" + today.getMinutes() + " " + (today.getHours() > 11 ? 'PM' : 'AM'));
+    let day = new Date();
 
-    today = mm + '/' + dd + '/' + yyyy;
-    if($("todayDate").length){
-        document.getElementById("todayDate").innerHTML = today;
-    }
+    const today = (() => {
+        return function today() {
+            var dd = String(day.getDate()).padStart(2, '0');
+            var mm = String(day.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = day.getFullYear();
+            return mm + '/' + dd + '/' + yyyy;
+        };
+    })();
+
+    const time = (() => {
+        return function time() {
+            let now = new Date();
+            let hour = now.getHours();
+            hour = ((hour > 12) ? hour  % 12 : (hour === 0 ? 12 : hour));
+            let minutes = (() => 
+                (now.getMinutes() < 10 ? `0${now.getMinutes()}` : now.getMinutes())
+                )(); 
+            let timeMode = (now.getHours() > 11 ? 'PM' : 'AM');
+            return `${hour}:${minutes} ${timeMode}`;
+        };
+    })();
+
+    (() => {
+        if($("#todayDate").length){
+            $("#todayDate").html(today());
+        }
+    })();
+    
 
     let families = { 0: 'Choose..', id1: 'Family 1', id2: 'Family 2', id3: 'Family 3' };
-    if($("#familyGroup").length) {
-        let select = document.getElementById("familyGroup");
+    if($(".family-group").length) {
+        //let select = document.getElementsByClassName("familyGroup");
 
         for (let key in families) {
-            let opt = document.createElement('option');
+            let opt = `<option value="${key}">${families[key]}</option>`;
+            $(".family-group").append(opt);
+            /*let opt = document.createElement('option');
             opt.value = key;
             opt.innerHTML = families[key];
-            select.appendChild(opt);
+            select.appendChild(opt);*/
         }
     }
     $('[data-toggle="notificationTooltip"]').popover();
@@ -62,17 +84,22 @@ $(document).ready(function () {
     });
 
     const validation = () => {
-        let textInput = document.getElementById("messageInput").value;
+        let textInput = $("#messageInput").val();
         if (textInput === '' || textInput === null) {
             alert("Please fill all fields...!!!!!!");
             return false;
-        } else {
+        }
+        else if (textInput.length >= 255) {
+            alert("Message to long..");
+            return false;
+        }
+         else {
             return true;
         }
     }
 
-    $('.msg_send_btn').click(function () {
-        if (validation) {
+    $('#textInputForm').submit(() => {
+        if (validation()) {
             var tempScrollTop = $(window).scrollTop();
             let text = document.getElementById("messageInput").value;
 
@@ -88,7 +115,7 @@ $(document).ready(function () {
 
             var spanDate = document.createElement('span');
             spanDate.className = 'time_date';
-            spanDate.innerHTML = time + " | " + "Today"; //today
+            spanDate.innerHTML = time() + " | " + "Today"; //today
 
             sentMsgDiv.appendChild(textParagraph);
             sentMsgDiv.appendChild(spanDate);
@@ -126,7 +153,7 @@ $(document).ready(function () {
         innerDiv.className = "carousel-caption d-none d-md-block";
 
         var header = document.createElement('h2');
-        header.innerHTML = today;
+        header.innerHTML = today();
 
         var caption = document.createElement('p');
         caption.className = "d-none d-sm-block";

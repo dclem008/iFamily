@@ -36,7 +36,8 @@
                 </ul>
             </div>
             <span class="navbar-text">
-                <a href="#notfications" data-toggle="notificationTooltip" data-placement="bottom" title="Notifications"
+                <a href="./index.html"><i class="fa fa-commenting fa-lg" aria-hidden="true"></i></a>
+                <a href="#notfications" class="ml-3" data-toggle="notificationTooltip" data-placement="bottom" title="Notifications"
                     data-content="You've got (4) New Messages!" data-trigger="focus">
                     <i class="fa fa-bell fa-lg" aria-hidden="true"></i>
                     <span class="badge badge-primary">4</span>
@@ -99,73 +100,80 @@
     </div>
 
     <div class="container">
-        <div id="scheduleContent">
-            <div class="row">
-                <div class="col-9">
-                    <h5>Today...</h5>
-                </div>
-                <div class="col-3 text-right">
-                    <a herf="#"><i class="fa fa-chevron-left fa-md mr-2" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-chevron-right fa-md" aria-hidden="true"></i></a>
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <div id="scheduleContent">
+                    <div class="row">
+                        <div class="col-9">
+                            <h5>Today...</h5>
+                        </div>
+                        <div class="col-3 text-right">
+                            <a herf="#prevDay"><i class="fa fa-chevron-left fa-md mr-2 text-dark zoom" aria-hidden="true"></i></a>
+                            <a href="#nextDay"><i class="fa fa-chevron-right fa-md zoom" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <span class="navbar-text">
+                        <a id="scheduleLink" href="#">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Event
+                        </a>
+                    </span>
+                    <div class="row">
+                        <div class="schedule-list">
+                            <div class="p-3 bg-white">
+                                <div class="d-flex align-items-center row"><label class="col-10"><input type="checkbox"
+                                            class="option-input radio"><span class="label-text">Task list and
+                                            assignments</span></label>
+                                            <span class="time_date">9: 00 AM</span></div>
+                                <div class="d-flex align-items-center row"><label class="col-10"><input type="checkbox"
+                                            class="option-input radio"><span class="label-text">Set due date and
+                                            assignments</span></label>
+                                            <span class="time_date">9: 30 AM</span></div>
+                                <div class="d-flex align-items-center row"><label class="col-10"><input type="checkbox"
+                                            class="option-input radio"><span class="label-text">Remove duplicate tasks
+                                            and stories</span></label>
+                                            <span class="time_date">12: 00 PM</span></div>
+                                <div class="d-flex align-items-center row"><label class="col-10"><input type="checkbox"
+                                            class="option-input radio"><span class="label-text">Update the userflow and
+                                            stories</span></label>
+                                            <span class="time_date">2: 00 PM</span></div>
+                                <div class="d-flex align-items-center row"><label class="col-10"><input type="checkbox"
+                                            class="option-input radio"><span class="label-text">Adjust the
+                                            components</span></label>
+                                            <span class="time_date">7: 00 PM</span></div>
+                            </div>
+                        </div>
+                    </div>         
                 </div>
             </div>
-            <span class="navbar-text">
-                <a id="scheduleLink" href="#">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Event
-                </a>
-            </span>
-            <div class="row">
-                <div class="schedule-list">
-                    <div class="p-3 bg-white">
-                        <div class="d-flex align-items-center row"><label class="col-10"><input type="checkbox"
-                                    class="option-input radio"><span class="label-text">Task list and
-                                    assignments</span></label>
-                                    <span class="time_date">9: 00 AM</span></div>
-                        <div class="d-flex align-items-center row"><label class="col-10"><input type="checkbox"
-                                    class="option-input radio"><span class="label-text">Set due date and
-                                    assignments</span></label>
-                                    <span class="time_date">9: 30 AM</span></div>
-                        <div class="d-flex align-items-center row"><label class="col-10"><input type="checkbox"
-                                    class="option-input radio"><span class="label-text">Remove duplicate tasks
-                                    and stories</span></label>
-                                    <span class="time_date">12: 00 PM</span></div>
-                        <div class="d-flex align-items-center row"><label class="col-10"><input type="checkbox"
-                                    class="option-input radio"><span class="label-text">Update the userflow and
-                                    stories</span></label>
-                                    <span class="time_date">2: 00 PM</span></div>
-                        <div class="d-flex align-items-center row"><label class="col-10"><input type="checkbox"
-                                    class="option-input radio"><span class="label-text">Adjust the
-                                    components</span></label>
-                                    <span class="time_date">7: 00 PM</span></div>
-                    </div>
-                </div>
-            </div>         
         </div>
+        
     </div>
     
     <footer class="footer">
         <div class="container">
             <div class="row justify-content-center">
-                <nav>
-                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link zoom" id="nav-chat-tab" data-toggle="tab" href="#chat" role="tab" aria-controls="nav-chat" aria-selected="true">
-                            <div class="row">
-                                <i class="fa fa-commenting col-12" aria-hidden="true"></i>
-                            </div>Chat</a>
-                        <a class="nav-item nav-link active zoom" id="nav-schedule-tab" data-toggle="tab" href="#schedule" role="tab" aria-controls="nav-schedule" aria-selected="false">
-                            <div class="row">
-                                <i class="fa fa-calendar col-12" aria-hidden="true"></i>
-                            </div>Schedule</a>
-                        <a class="nav-item nav-link zoom" id="nav-tasks-tab" data-toggle="tab" href="#tasks" role="tab" aria-controls="nav-tasks" aria-selected="false">
-                            <div class="row">
-                                <i class="fa fa-check-circle-o col-12" aria-hidden="true"></i>
-                            </div>Tasks</a>
-                        <a class="nav-item nav-link zoom" id="nav-memories-tab" data-toggle="tab" href="#memories" role="tab" aria-controls="nav-about" aria-selected="false">
-                            <div class="row">
-                                <i class="fa fa-camera col-12" aria-hidden="true"></i>
-                            </div>Memories</a>
-                    </div>
-                </nav>
+                <div class="col-12">
+                    <nav>
+                        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link zoom col-3" id="nav-chat-tab" data-toggle="tab" href="#chat" role="tab" aria-controls="nav-chat" aria-selected="true">
+                                <div class="row">
+                                    <i class="fa fa-commenting col-12" aria-hidden="true"></i>
+                                </div>Chat</a>
+                            <a class="nav-item nav-link active zoom col-3" id="nav-schedule-tab" data-toggle="tab" href="#schedule" role="tab" aria-controls="nav-schedule" aria-selected="false">
+                                <div class="row">
+                                    <i class="fa fa-calendar col-12" aria-hidden="true"></i>
+                                </div>Schedule</a>
+                            <a class="nav-item nav-link zoom col-3" id="nav-tasks-tab" data-toggle="tab" href="#tasks" role="tab" aria-controls="nav-tasks" aria-selected="false">
+                                <div class="row">
+                                    <i class="fa fa-check-circle-o col-12" aria-hidden="true"></i>
+                                </div>Tasks</a>
+                            <a class="nav-item nav-link zoom col-3" id="nav-memories-tab" data-toggle="tab" href="#memories" role="tab" aria-controls="nav-about" aria-selected="false">
+                                <div class="row">
+                                    <i class="fa fa-camera col-12" aria-hidden="true"></i>
+                                </div>Memories</a>
+                        </div>
+                    </nav>
+                </div>
            </div>
            <div class="row justify-content-center">             
                 <div class="col-auto">

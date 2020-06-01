@@ -1,14 +1,18 @@
-$lt-gray: #ddd;
+$lt-gray: #faf2f6;
 $background-dark: #E75480;
 $background-light: #FFB6C1;
 $modal-background-light: floralwhite;
 $navbar-menu-background: #ffc4cd;
 $background-pale: #fff0f2;
 $blue-color: #05728f;
+$primary-blue-color: #5bc0de;//#0275d8;
 
 //Height variables
 $carousel-item-height: 300px;
 
+html {
+    background-color: $lt-gray;
+}
 
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
     margin: 0px auto;
@@ -25,9 +29,13 @@ $carousel-item-height: 300px;
     min-height: 400px;
 }
 
+.container {
+    min-width: 100%;
+}
+
 .footer {
     background-color: $background-pale;
-    height: 95px;
+    height: 65px;
     border-top: 1px solid $blue-color;
     @include zero-margin(5px, 0px);
 
@@ -36,15 +44,24 @@ $carousel-item-height: 300px;
     }
     .nav-link {
         background-color: #ffff;
-        color: rgb(41, 34, 34);
+        //color: rgb(94, 245, 94);
+        color: #5cb85c;
         width:95px;
         //border-radius: 15px;
     }
+
+    .nav-link.active {
+        //background-color: rgb(184, 245, 153);
+        background-color: #DDFFCC;
+        color: rgb(23, 170, 23);
+    }
     .active, .nav-link:hover {
-        background:linear-gradient(45deg, #fff0f2, #fff7f8, #ffff);
-        -moz-box-shadow: 0 0 10px #ccc;
-        -webkit-box-shadow: 0 0 10px #ccc;
-        box-shadow: 0 0 10px #05728f;
+        //background:linear-gradient(45deg, #fff0f2, #fff7f8, #ffff);
+        background-color: #DDFFCC;
+        color: rgb(23, 170, 23);
+        -moz-box-shadow: 0 0 10px #DDFFCC;
+        -webkit-box-shadow: 0 0 10px #DDFFCC;
+        //box-shadow: 0 0 10px #05728f;
     }
 }
 
@@ -71,6 +88,10 @@ body {
 
 .tab-content {
     padding: 1px;
+}
+
+.tab-content > .active {
+    background-color: $lt-gray;
 }
 
 .carousel {
@@ -214,7 +235,7 @@ body {
     }
 }
 .zoom {
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 .zoom:hover {
     -ms-transform: scale(1.01); /* IE 9 */
@@ -222,24 +243,23 @@ body {
     transform: scale(1.01);
 }
 
-.zoom:active {
-    -ms-transform: scale(1.01); /* IE 9 */
-    -webkit-transform: scale(1.01); /* Safari 3-8 */
-    transform: scale(1.01);
+.zoom::after {
+    z-index: 5;
+    padding-right: 2px;
 }
 
 #navBarDiv {
-    min-height: 100%;
     background-color: $navbar-menu-background;
     background:linear-gradient(45deg, #ffcbd3, #ffcbd3, #fff7f8);
-    width: 30%;
     float: left;
     overflow-y: auto;
     overflow-x: hidden;
     border-left: 1px solid $blue-color;
+    min-height: 100%;
 
     .container {
         padding-left: 0;
+        width: 100%;
         #navBarMenu {
             width: 100%;
             min-height: 77%;
@@ -249,7 +269,6 @@ body {
             border-right: 2px solid $blue-color;
             .chat_list {
                 width:100%;
-                min-height: 100%;
                 position: absolute;
                 top:0;
                 .navbar-header {
@@ -310,15 +329,6 @@ body {
 #addUser i {
     color: $blue-color;
 }
-#addUser:hover {
-    -moz-border-radius-topleft: 16px;
-  -moz-border-radius-topright: 16px;
-  -moz-border-radius-bottomright: 16px;
-  -moz-border-radius-bottomleft: 16px;
-  -webkit-border-radius: 16px 16px 16px 16px;
-  border-radius: 16px 16px 16px 16px;
-  background-color: #E75480;
-}
 
 #chatsIcon i {
     color: $blue-color;
@@ -327,6 +337,7 @@ body {
 #chatsIcon2 a {
     color: $blue-color;
     position: relative;
+    text-decoration: none;
     //text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
 
@@ -340,7 +351,7 @@ body {
 
 .mesgs {
     width:100%;
-    height:100%;
+    min-height:100%;
     position: relative;
 }
 
@@ -357,6 +368,14 @@ body {
     right:0;
     position: absolute;
     z-index: -1;
+}
+
+#scheduleLink {
+    text-decoration: none;
+}
+
+#chat {
+    min-height: 100%;
 }
 
 #input_msg {
@@ -431,15 +450,17 @@ body {
   .tab-pane {
     float: right;
     padding: 15px 1px 95px 15px;
-    width: 70%;
+    width: 100%;
+    min-height: 100%;
   }
 
   .card-images {
-    width:100%;
     margin-left: 20px;
     .card {
         margin-bottom: 30px;
         margin-right: 30px;
+        opacity: 0.7;
+        //transition: opacity 0.3s;
 
         .card-body {
             visibility: hidden;
@@ -450,6 +471,7 @@ body {
         -webkit-box-shadow: 0 0 10px rgb(156, 133, 236);
         box-shadow: 0 0 10px rgb(156, 133, 236);
         transition: all 0.3s ease;
+        opacity: 1;
 
         .card-body {
             visibility: visible;
@@ -477,6 +499,7 @@ body {
         margin-left: 0;
         min-width: 100%;
         float: left;
+        border-top-left-radius: 42px;
 
         .p-3 .d-flex {
             margin-left: 0;
@@ -489,6 +512,29 @@ body {
         }
     }
     
+  }
+
+  #prevDay:hover {
+    color: $primary-blue-color;
+  }
+
+  #notifications {
+      position: relative;
+      padding-top: 20px;
+      display: inline-block;
+      i {
+          margin-right: -40px;
+      }
+      .badge {
+          position: absolute;
+          top: 50px;
+          right: -20px;
+          text-align: center;
+          padding: 5px 10px;
+          font-size: 20px;
+          text-decoration: none;
+          //vertical-align: baseline;
+      }
   }
   
 .notes {
