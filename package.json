@@ -1,7 +1,7 @@
 {
-  "name": "confusion",
+  "name": "iFamily",
   "version": "1.0.0",
-  "description": "This is a website for Ristorante Con Fusion",
+  "description": "This is a project for an app called iFamily",
   "main": "index.html",
   "scripts": {
     "start": "npm run lite",
