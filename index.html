@@ -362,19 +362,24 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <span class="navbar-text">
+                        <span class="navbar-text mr-sm-4">
                             <a href="#" class="profileIcon"><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
                         </span>
                         <div class="collapse navbar-collapse" id="Navbar">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active"><a class="nav-link" href="#"><span
-                                            class="fa fa-home fa-lg"></span>Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="./schedule.html"><i class="fa fa-calendar"
-                                            aria-hidden="true"></i> Schedule</a></li>
-                                <li class="nav-item"><a class="nav-link" href="./tasks.html"><span
-                                            class="fa fa-check-circle-o fa-lg"></span>Tasks</a></li>
-                                <li class="nav-item"><a class="nav-link" href="./memoryBook.html"><i class="fa fa-camera"
-                                            aria-hidden="true"></i> Memories</a></li>
+                            <ul class="navbar-nav">
+                                <li class="nav-item active mr-sm-4"><a class="nav-link" href="#" data-toggle="homeTooltip" data-placement="bottom" title="Home"
+                                    data-trigger="focus"><span class="fa fa-home fa-lg"></span><text class="d-sm-none">Home</text></a></li>
+                                <li class="nav-item mr-sm-4"><a class="nav-link" href="./schedule.html" data-toggle="scheduleTooltip" data-placement="bottom" title="Schedule"
+                                    data-trigger="focus"><i class="fa fa-calendar"
+                                            aria-hidden="true"></i><text class="d-sm-none">Schedule</text></a></li>
+                                <li class="nav-item mr-sm-4"><a class="nav-link" href="./tasks.html" data-toggle="tasksTooltip" data-placement="bottom" title="Tasks"
+                                    data-trigger="focus"><span class="fa fa-check-circle-o fa-lg"></span><text class="d-sm-none">Tasks</text></a></li>
+                                <li class="nav-item mr-sm-4"><a class="nav-link" href="./memoryBook.html" data-toggle="memoriesTooltip" data-placement="bottom" title="Memories"
+                                    data-trigger="focus"><i class="fa fa-camera"
+                                            aria-hidden="true"></i><text class="d-sm-none">Memories</text></a></li>
+                                <li class="nav-item d-block d-md-none mr-sm-4">
+                                    <a class="nav-link addUser" href="#" data-toggle="addUserTooltip" data-placement="bottom" title="Add User"
+                                    data-trigger="focus"><i class="fa fa-user-plus zoom" aria-hidden="true"></i><text class="d-sm-none">Add User</text></a></li>
                             </ul>
                         </div>
                         <span class="navbar-text" id="loginHeader">
@@ -388,35 +393,36 @@
                             </a>
                             <a id="loginLink" href="#" class="nav-item justify-content-center loginLink ml-3"
                                 data-toggle="loginTooltip" data-placement="bottom" title="Login">
-                                <span class="fa fa-sign-in"></span> Login
+                                <span class="fa fa-sign-in"></span><text class="d-none d-block-lg">Login</text>
                             </a>
                         </span>
                     </div>
                 </nav>
             </div>
             <div class="col-sm-3">
-                    <div class="navbar navbar-expand-sm ml-0 position-fixed border-right col-sm-3" id="navBarDiv">
+                    <div class="navbar navbar-expand-sm ml-0 position-fixed border-right col-sm-3 mt-sm-3 mt-md-3" id="navBarDiv">
                         <div class="container">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarMenu">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            <div class="row collapse navbar-collapse" id="navBarMenu">
+                            <div class="row collapse navbar-collapse d-none d-lg-block" id="navBarMenu">
                                 <div class="chat_list">
                                     <div class="nav navbar-header justify-content-center">
-                                        <div class="row">
-                                            <div class="col-4 justify-content-center">
+                                        <div class="row justify-content-center">
+                                            <!--<div class="col-4 justify-content-center">
                                                 <span class="navbar-brand mb-0 h1" id="chatsIcon">
                                                     <i class="fa fa-users fa-lg" aria-hidden="true"></i>
                                                 </span>
-                                            </div>
-                                            <div class="col-4">
-                                                <span class="navbar-brand mb-0 h1" id="chatsIcon2">
-                                                    <a href="#"><i class="fa fa-comments" aria-hidden="true"></i> Chats</a>
+                                            </div>-->
+                                            <div class="col mt-lg-0 mt-6">
+                                                <span class="navbar-brand mb-0 h1">
+                                                    <a href="#" class="span-color"><i class="fa fa-comments" aria-hidden="true"></i> Chats</a>
                                                 </span>
                                             </div>
-                                            <div class="col-4 text-right">
-                                                <span class="navbar-brand ml-auto">
-                                                    <a id="addUser" href="#"><i class="fa fa-user-plus zoom" aria-hidden="true"></i></a>
+                                            <div class="col-12 d-block d-md-none"></div>
+                                            <div class="col-lg col-md-4 ml-6 d-none d-md-block">
+                                                <span class="navbar-brand">
+                                                    <a class="span-color addUser" href="#"><i class="fa fa-user-plus zoom" aria-hidden="true"></i></a>
                                                 </span>
                                             </div>
                                         </div>
@@ -430,9 +436,9 @@
                                                     <a href="#" class="stretched-link"></a>
                                                 </div>
                                                 <div class="col-lg-8 chat_ib">
-                                                    <h5>Family 1 <span class="chat_date"><i class="fa fa-clock-o"
-                                                                aria-hidden="true"></i> April 11</span></h5>
-                                                    <p>Remember to get your tasks done today!</p>
+                                                    <h5 class="mt-lg-0 mt-md-2">Family 1 &#124; <span class="chat_date"><i class="fa fa-clock-o"
+                                                            aria-hidden="true"></i> April 11</span></h5>
+                                                    <p class="text-msgs d-none d-md-block">Remember to get your tasks done today!</p>
                                                     <a href="#" class="stretched-link"></a>
                                                 </div>
                                             </div>
@@ -442,9 +448,9 @@
                                                     <a href="#" class="stretched-link"></a>
                                                 </div>
                                                 <div class="col-lg-8 chat_ib">
-                                                    <h5>Family 2 <span class="chat_date"><i class="fa fa-clock-o"
+                                                    <h5 class="mt-lg-0 mt-md-2">Family 2 <span class="chat_date"><i class="fa fa-clock-o"
                                                                 aria-hidden="true"></i> April 10</span></h5>
-                                                    <p>Remember to get your tasks done today!</p>
+                                                    <p class="text-msgs">Remember to get your tasks done today!</p>
                                                     <a href="#" class="stretched-link"></a>
                                                 </div>
                                             </div>
@@ -454,9 +460,9 @@
                                                     <a href="#" class="stretched-link"></a>
                                                 </div>
                                                 <div class="col-lg-8 chat_ib">
-                                                    <h5>Family 3 <span class="chat_date"><i class="fa fa-clock-o"
+                                                    <h5 class="mt-lg-0 mt-md-2">Family 3 &#124; <span class="chat_date"><i class="fa fa-clock-o"
                                                                 aria-hidden="true"></i> April 4</span></h5>
-                                                    <p>Remember to get your tasks done today!</p>
+                                                    <p class="text-msgs">Remember to get your tasks done today!</p>
                                                     <a href="#" class="stretched-link"></a>
                                                 </div>
                                             </div>
@@ -742,7 +748,7 @@
             </div>
         </div>
     </div>
-    <footer class="footer fixed-bottom">
+    <footer class="footer fixed-bottom mt-2">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12">

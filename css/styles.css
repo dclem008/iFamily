@@ -1,4 +1,4 @@
-html {
+html, body {
   background-color: #faf2f6; }
 
 .row-header {
@@ -141,9 +141,9 @@ body {
   margin-left: 0;
   border: 1px solid;
   background: linear-gradient(45deg, #E75480, #FF7EBE, #F5D0E2);
-  -moz-box-shadow: 0 0 10px #9c85ec;
-  -webkit-box-shadow: 0 0 10px #9c85ec;
-  box-shadow: 0 0 10px #9c85ec; }
+  -moz-box-shadow: 0 1px 15px #9c85ec;
+  -webkit-box-shadow: 0 1px 15px #9c85ec;
+  box-shadow: 0 1px 15px #9c85ec; }
   #navHeader .container {
     margin-left: 0;
     min-width: 100%; }
@@ -188,7 +188,7 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   border-left: 1px solid #05728f;
-  min-height: 100%; }
+  min-height: 515px; }
   #navBarDiv .container {
     padding-left: 0;
     width: 100%; }
@@ -208,9 +208,9 @@ body {
           padding: 5px 10px 10px 10px;
           background: linear-gradient(45deg, #ffc4cd, #ffbdc7, #ffc4cd);
           border-radius: 5px;
-          -moz-box-shadow: 0 0 10px #9c85ec;
-          -webkit-box-shadow: 0 0 10px #9c85ec;
-          box-shadow: 0 0 10px #9c85ec;
+          -moz-box-shadow: 0 5px 18px #9c85ec;
+          -webkit-box-shadow: 0 5px 18px #9c85ec;
+          box-shadow: 0 5px 18px #9c85ec;
           transition: all 0.3s ease; }
         #navBarDiv .container #navBarMenu .chat_list .chat_nav .chat_family:hover {
           -moz-box-shadow: 0 0 10px #9c85ec;
@@ -235,19 +235,23 @@ body {
               color: #464646;
               margin: 0 0 8px 0; }
               #navBarDiv .container #navBarMenu .chat_list .chat_nav .chat_family .chat_ib h5 span {
-                font-size: 13px;
-                float: right; }
+                font-size: 13px; }
               #navBarDiv .container #navBarMenu .chat_list .chat_nav .chat_family .chat_ib h5 p {
                 font-size: 14px;
                 color: #989898;
                 margin: auto; }
 
-#addUser i {
+.add-user i {
   color: #05728f; }
 
+.nav-add-user {
+  color: white; }
+
+.span-color {
+  color: #383a37; }
+
 #chatsIcon i {
-  color: #05728f;
-  margin-left: 0; }
+  color: #05728f; }
 
 #chatsIcon2 a {
   color: #05728f;
@@ -278,6 +282,12 @@ body {
   right: 0;
   position: absolute;
   z-index: -1; }
+
+.text-msgs {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px; }
 
 #scheduleLink {
   text-decoration: none; }

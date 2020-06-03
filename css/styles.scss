@@ -1,4 +1,5 @@
 $lt-gray: #faf2f6;
+$dark-gray: rgb(56, 58, 55);
 $background-dark: #E75480;
 $background-light: #FFB6C1;
 $modal-background-light: floralwhite;
@@ -6,11 +7,12 @@ $navbar-menu-background: #ffc4cd;
 $background-pale: #fff0f2;
 $blue-color: #05728f;
 $primary-blue-color: #5bc0de;//#0275d8;
+$footer-height: 65px;
 
 //Height variables
 $carousel-item-height: 300px;
 
-html {
+html, body {
     background-color: $lt-gray;
 }
 
@@ -35,7 +37,7 @@ html {
 
 .footer {
     background-color: $background-pale;
-    height: 65px;
+    height: $footer-height;
     border-top: 1px solid $blue-color;
     @include zero-margin(5px, 0px);
 
@@ -196,9 +198,9 @@ body {
     margin-left: 0;
     border: 1px solid;
     background:linear-gradient(45deg, $background-dark, #FF7EBE, #F5D0E2);
-    -moz-box-shadow: 0 0 10px rgb(156, 133, 236);
-    -webkit-box-shadow: 0 0 10px rgb(156, 133, 236);
-    box-shadow: 0 0 10px rgb(156, 133, 236);
+    -moz-box-shadow: 0 1px 15px rgb(156, 133, 236);
+    -webkit-box-shadow: 0 1px 15px rgb(156, 133, 236);
+    box-shadow: 0 1px 15px rgb(156, 133, 236);
     
 
     .container {
@@ -255,7 +257,8 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     border-left: 1px solid $blue-color;
-    min-height: 100%;
+    min-height: 515px;
+    //margin-bottom: -$footer-height;
 
     .container {
         padding-left: 0;
@@ -276,9 +279,9 @@ body {
                     padding: 5px 10px 10px 10px;
                     background:linear-gradient(45deg, $navbar-menu-background, #ffbdc7, $navbar-menu-background);
                     border-radius: 5px;
-                    -moz-box-shadow: 0 0 10px rgb(156, 133, 236);
-                    -webkit-box-shadow: 0 0 10px rgb(156, 133, 236);
-                    box-shadow: 0 0 10px rgb(156, 133, 236);
+                    -moz-box-shadow: 0 5px 18px rgb(156, 133, 236);
+                    -webkit-box-shadow: 0 5px 18px rgb(156, 133, 236);
+                    box-shadow: 0 5px 18px rgb(156, 133, 236);
                     transition: all 0.3s ease;
                 }
                 .chat_nav {
@@ -309,7 +312,7 @@ body {
                                 margin:0 0 8px 0;
                                 span {
                                     font-size:13px; 
-                                    float:right; 
+                                    //float:right; 
                                 }
                                 p {
                                     font-size:14px; 
@@ -326,13 +329,20 @@ body {
     }
     
 }
-#addUser i {
+.add-user i {
     color: $blue-color;
+}
+
+.nav-add-user {
+    color: white;
+}
+
+.span-color {
+    color: $dark-gray;
 }
 
 #chatsIcon i {
     color: $blue-color;
-    margin-left: 0;
 }
 #chatsIcon2 a {
     color: $blue-color;
@@ -368,6 +378,13 @@ body {
     right:0;
     position: absolute;
     z-index: -1;
+}
+
+.text-msgs {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
 }
 
 #scheduleLink {

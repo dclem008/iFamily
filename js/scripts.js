@@ -46,6 +46,11 @@ $(document).ready(function () {
     $('[data-toggle="notificationTooltip"]').popover();
     $('[data-toggle="profileTooltip"]').tooltip();
     $('[data-toggle="loginTooltip"]').tooltip();
+    $('[data-toggle="homeTooltip"]').tooltip();
+    $('[data-toggle="scheduleTooltip"]').tooltip();
+    $('[data-toggle="tasksTooltip"]').tooltip();
+    $('[data-toggle="memoriesTooltip"]').tooltip();
+    $('[data-toggle="addUserTooltip"]').tooltip();
 
     $("#mycarousel").carousel({ interval: 2000 });
     $("#carouselButton").click(function () {
@@ -79,7 +84,7 @@ $(document).ready(function () {
     });
 
 
-    $("#addUser").click(function () {
+    $(".addUser").click(function () {
         $("#addUserModal").modal('toggle');
     });
 
